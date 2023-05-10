@@ -1,0 +1,32 @@
+solve the below problem statement using the command line Interface.
+1.Display the list of the user,encrypted_password,UID and default shell.
+2.write the above data in a file user_detail.txt.
+3.change the default file permission where user have read and write acess,group have only write access and other have read acess.
+create a new user hapcap_test and change the default shell of thisuser to /bin/sh shell.
+create a file data_1 to data_10 with the extension of .txt with a single command.file name convention should look like data_1.txt 
+
+
+
+Solutions:-Commands
+
+1.cat /etc/passwd | awk -F: '{print $1, $2, $3, $7}'
+
+
+
+2.cat /etc/passwd | awk -F: '{print $1, $2, $3, $7}' > user_detail.txt
+
+
+
+3.chmod 644 user_detail.txt
+
+
+
+4.sudo adduser hapcap_test
+
+
+
+5.sudo chsh -s /bin/sh hapcap_test
+
+
+
+6.touch data_{1..10}.txt
